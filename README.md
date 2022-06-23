@@ -13,6 +13,15 @@
 - [Arrays]()
   - [**_Introduction to 1 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/1%20D%20Array)
 
+
+## Contributing
+
+Contributions are always welcome!
+Found a bug? Have a suggestion?
+
+Please submit issues/pull requests if you have feedback or would like to contribute.
+
+
 <p align="center">
   <img width="180" height="40" src="https://forthebadge.com/images/badges/built-with-love.svg">
 </p>
