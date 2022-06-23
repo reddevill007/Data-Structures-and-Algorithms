@@ -1,4 +1,4 @@
-# [DSA](https://github.com/reddevill007/Data-Structures-and-Algorithms)
+# [Data Structures and Algorithms](https://github.com/reddevill007/Data-Structures-and-Algorithms)
 
 <h1 align="center">Data Structures and Algorithms in C</h1>
 <p align="center">
