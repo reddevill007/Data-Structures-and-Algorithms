@@ -40,6 +40,10 @@
     - **_Finding multiple occurrences of a value_**
     - **_Decending order binary search_**
 
+  - [**Sorting** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Searching%20and%20Sorting/Sorting)
+
+    - **_Bubble Sort_**
+
 ## Contributing
 
 Contributions are always welcome!
