@@ -10,7 +10,7 @@ bool binary_search(int n, int arr[], int val)
 
     while (lft < rt)
     {
-        if (val > arr[mid])
+        if (val < arr[mid])
         {
             lft = mid + 1;
         }
@@ -30,8 +30,8 @@ bool binary_search(int n, int arr[], int val)
 
 int main()
 {
-    int arr[] = {10, 23, 45, 67, 88, 89, 90, 93, 95, 100};
-    int size = 10, val = 455;
+    int arr[] = {100, 98, 95, 90, 80, 76, 75, 70, 65, 62};
+    int size = 10, val = 80;
 
     bool ans = binary_search(size, arr, val);
 
