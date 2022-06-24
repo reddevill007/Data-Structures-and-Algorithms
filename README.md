@@ -38,6 +38,7 @@
     - **_Linear Search_**
     - **_Binary Search_**
     - **_Finding multiple occurrences of a value_**
+    - **_Decending order binary search_**
 
 ## Contributing
 
