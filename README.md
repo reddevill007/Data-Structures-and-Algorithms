@@ -4,7 +4,7 @@
 
 # [![Instagram](https://img.shields.io/badge/Saurabh_Pandey-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/_inertiaa/) [![Instagram](https://img.shields.io/badge/happy_snappy-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/happy._.snappy_/) [![YouTube](https://img.shields.io/badge/code_inertia-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCmpXdOaZAIXfAG4kKSdrPDA) [![Website](https://img.shields.io/website?label=codeinertia&style=for-the-badge&url=https%3A%2F%2Fcodestackr.com)](https://reddevill007.github.io/my-portfolio/) [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saurabh-pandey-161348200)
 
-## **_Hi! This is my Data Structures and Algorithms repository in c++. Here you will get all the code inplimentation of data structures and algorithms_**
+## **_Hi! This is my Data Structures and Algorithms repository in c++. Here you will get all the code implimentation of data structures and algorithms_**
 
 ## 🌟Table of Contents🌟
 
@@ -31,9 +31,9 @@
     - **_Matrix Multiplication_**
     - **_Transpose of Matrix_**
 
-- [Searching and Sorting](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays)
+- [Searching and Sorting](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Searching%20and%20Sorting)
 
-  - [**_Searching_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays/1%20D%20Array)
+  - [**_Searching_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Searching%20and%20Sorting/Searching)
 
     - **_Linear Search_**
     - **_Binary Search_**
