@@ -8,9 +8,9 @@
 
 ## 🌟Table of Contents🌟
 
-- [Arrays]()
+- [Arrays](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays)
 
-  - [**_1 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/1%20D%20Array)
+  - [**_1 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays/1%20D%20Array)
 
     - **_1 D array introdution_**
     - **_Finding sum and average of 1d array_**
@@ -18,7 +18,7 @@
     - **_Linear search in 1d array_**
     - **_Finding smallest and second smallest element in 1d array_**
 
-  - [**_Introduction to 2 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/2%20D%20Array)
+  - [**_Introduction to 2 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays/2%20D%20Array)
     - **_2 D array reading data from user_**
     - **_Matrix Addition_**
     - **_Matrix Multiplication_**
