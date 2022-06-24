@@ -15,8 +15,14 @@ int main()
             ct++;
         }
     }
-
-    cout << "Value " << val << " occured " << ct << " times" << endl;
+    if (ct == 0)
+    {
+        cout << val << " does not exist in the givem array" << endl;
+    }
+    else
+    {
+        cout << "Value " << val << " occured " << ct << " times" << endl;
+    }
 
     return 0;
 }
