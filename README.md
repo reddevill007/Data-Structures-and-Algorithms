@@ -19,10 +19,25 @@
     - **_Finding smallest and second smallest element in 1d array_**
 
   - [**_Introduction to 2 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays/2%20D%20Array)
+
     - **_2 D array reading data from user_**
     - **_Matrix Addition_**
     - **_Matrix Multiplication_**
     - **_Transpose of Matrix_**
+
+  - [**_Introduction to 2 D Array_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays/2%20D%20Array)
+    - **_2 D array reading data from user_**
+    - **_Matrix Addition_**
+    - **_Matrix Multiplication_**
+    - **_Transpose of Matrix_**
+
+- [Searching and Sorting](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays)
+
+  - [**_Searching_** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Arrays/1%20D%20Array)
+
+    - **_Linear Search_**
+    - **_Binary Search_**
+    - **_Finding multiple occurrences of a value_**
 
 ## Contributing
 
