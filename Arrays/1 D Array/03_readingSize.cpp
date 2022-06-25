@@ -14,15 +14,15 @@ int main()
     for (int i = 0; i < n; i++)
     {
         cout << "Enter the number ";
-        cin >> arr[count];
+        cin >> arr[i];
     }
 
     biggest = arr[0];
 
     for (int i = 0; i < n; i++)
     {
-        if (arr[count] > biggest)
-            biggest = arr[count];
+        if (arr[i] > biggest)
+            biggest = arr[i];
     }
 
     cout << "The largest element in the array is " << biggest << endl;

@@ -44,6 +44,8 @@
 
     - **_Bubble Sort_**
     - **_Selection Sort_**
+    - **_Optamized Buble Sort_**
+    - **_Decending Order Selection Sort_**
 
 ## Contributing
 
