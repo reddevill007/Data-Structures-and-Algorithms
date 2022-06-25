@@ -43,6 +43,7 @@
   - [**Sorting** 📜](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Searching%20and%20Sorting/Sorting)
 
     - **_Bubble Sort_**
+    - **_Selection Sort_**
 
 ## Contributing
 
