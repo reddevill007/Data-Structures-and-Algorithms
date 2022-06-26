@@ -47,6 +47,19 @@
     - **_Optamized Buble Sort_**
     - **_Decending Order Selection Sort_**
 
+- [Stacks](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Stacks)
+
+  - **_Stack Implementation_**
+
+- [Queue](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Queue)
+
+  - **_Queue Implementation_**
+  - **_Create C++ STL Queue_**
+  - **_Remove Element from the C++ STL Queue_**
+  - **_Access Element from the C++ STL Queue_**
+  - **_Get the size of the C++ STL Queue_**
+  - **_Check if the Queue is Empty in C++ STL Queue_**
+
 ## Contributing
 
 Contributions are always welcome!
