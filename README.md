@@ -50,6 +50,11 @@
 - [Stacks](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Stacks)
 
   - **_Stack Implementation_**
+  - **_Create C++ STL Stack_**
+  - **_Remove Element from the C++ STL Stack_**
+  - **_Access Element from the C++ STL Stack_**
+  - **_Get the size of the C++ STL Stack_**
+  - **_Check if the Stack is Empty in C++ STL Stack_**
 
 - [Queue](https://github.com/reddevill007/Data-Structures-and-Algorithms/tree/master/Queue)
 
