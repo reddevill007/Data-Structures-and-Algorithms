@@ -2,6 +2,16 @@
 #include <stack>
 using namespace std;
 
+void printStack(stack<string> s)
+{
+    while (!s.empty())
+    {
+        cout << s.top() << " ";
+        s.pop();
+    }
+    cout << endl;
+}
+
 int main()
 {
 
@@ -13,10 +23,8 @@ int main()
     colors.push("Orange");
     colors.push("Blue");
 
-    // get top element
-    string top = colors.top();
-
-    cout << "Top Element: " << top;
+    // Printing stack
+    printStack(colors);
 
     return 0;
 }
