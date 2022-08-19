@@ -2,29 +2,52 @@
 #include <stack>
 using namespace std;
 
-void printStack(stack<string> s)
+void printStack(stack<int> s)
 {
     while (!s.empty())
     {
         cout << s.top() << " ";
+
         s.pop();
     }
     cout << endl;
 }
 
+int sumStack(stack<int> s)
+{
+    int sum = 0;
+    while (!s.empty())
+    {
+        sum += s.top();
+        s.pop();
+    }
+    return sum;
+}
+
 int main()
 {
 
-    // create a stack of strings
-    stack<string> colors;
+    stack<int> s1;
+    stack<int> s2;
 
-    // push element into the stack
-    colors.push("Red");
-    colors.push("Orange");
-    colors.push("Blue");
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
+    s1.push(4);
+    s1.push(5);
 
-    // Printing stack
-    printStack(colors);
+    s2.push(10);
+    s2.push(2);
+    s2.push(1);
+    s2.push(4);
+    s2.push(6);
+    int sum1 = sumStack(s1);
+    int sum2 = sumStack(s2);
+
+    if (sum1 > sum2)
+        s1.pop();
+    else
+        s2.pop();
 
     return 0;
 }
