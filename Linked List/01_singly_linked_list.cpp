@@ -70,7 +70,6 @@ void insertAtPosition(Node *&head, Node *&tail, int data, int pos)
     // insertion at end
     if (temp->next == NULL)
     {
-        cout << "Calling insert at end function" << endl;
         insertAtEnd(tail, data);
         return;
     }
