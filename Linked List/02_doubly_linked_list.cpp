@@ -18,6 +18,18 @@ public:
         this->prev = NULL;
         this->next = NULL;
     }
+
+    ~Node()
+    {
+        int val = this->data;
+        if (next != NULL)
+        {
+            delete next;
+            next = NULL;
+        }
+
+        cout << "Meomory free for node with data " << val << endl;
+    }
 };
 
 int getLength(Node *&head)
@@ -110,6 +122,48 @@ void insertAtPosition(Node *&head, Node *&tail, int data, int pos)
     newNode->prev = temp;
 }
 
+void deleteNode(int pos, Node *&head, Node *&tail)
+{
+    if (pos == 1)
+    {
+        Node *temp = head;
+        temp->next->prev = NULL;
+        head = temp->next;
+        temp->next = NULL;
+        delete temp;
+    }
+
+    else
+    {
+        Node *curr = head;
+        Node *pre = NULL;
+
+        int ct = 1;
+
+        while (ct < pos)
+        {
+            pre = curr;
+            curr = curr->next;
+            ct++;
+        }
+
+        curr->prev = NULL;
+        if (curr->next != NULL)
+        {
+            curr->next->prev = pre;
+        }
+        pre->next = curr->next;
+        curr->next = NULL;
+
+        if (pre->next == NULL)
+        {
+            tail = pre;
+        }
+
+        delete curr;
+    }
+}
+
 void print(Node *&head, Node *&tail)
 {
     if (head == NULL)
@@ -168,5 +222,14 @@ int main()
     print(head, tail);
 
     insertAtPosition(head, tail, 0, 100);
+    print(head, tail);
+
+    deleteNode(1, head, tail);
+    print(head, tail);
+
+    deleteNode(7, head, tail);
+    print(head, tail);
+
+    deleteNode(3, head, tail);
     print(head, tail);
 }
