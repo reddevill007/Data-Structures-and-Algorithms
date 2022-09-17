@@ -83,6 +83,18 @@ void deleteNode(int val, Node *&tail)
         }
 
         prev->next = curr->next;
+
+        // For One Node
+        if (curr == prev)
+        {
+            tail = NULL;
+        }
+
+        else if (tail == curr)
+        {
+            tail = prev;
+        }
+
         curr->next = NULL;
         delete curr;
     }
@@ -91,6 +103,12 @@ void deleteNode(int val, Node *&tail)
 void print(Node *tail)
 {
     Node *temp = tail;
+
+    if (tail == NULL)
+    {
+        cout << "List is empty" << endl;
+        return;
+    }
 
     do
     {
@@ -110,18 +128,21 @@ int main()
     insertNode(tail, 5, 3);
     print(tail);
 
-    insertNode(tail, 3, 5);
-    print(tail);
+    // insertNode(tail, 3, 5);
+    // print(tail);
 
-    insertNode(tail, 5, 7);
-    print(tail);
+    // insertNode(tail, 5, 7);
+    // print(tail);
 
-    insertNode(tail, 7, 9);
-    print(tail);
+    // insertNode(tail, 7, 9);
+    // print(tail);
 
-    insertNode(tail, 5, 6);
-    print(tail);
+    // insertNode(tail, 5, 6);
+    // print(tail);
 
-    deleteNode(5, tail);
+    // deleteNode(5, tail);
+    // print(tail);
+
+    deleteNode(3, tail);
     print(tail);
 }
