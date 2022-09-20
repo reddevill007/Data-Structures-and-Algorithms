@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 #include <algorithm>
 
 using namespace std;
@@ -147,6 +148,29 @@ bool isCircular(Node *head)
         return false;
     }
     return true;
+}
+
+// Using hash map
+bool isCircularMap(Node *head)
+{
+    Node *temp = head;
+    map<Node *, bool> m;
+
+    while (temp != NULL && temp != head)
+    {
+        m[temp] = true;
+        temp = temp->next;
+    }
+
+    if (m[temp])
+    {
+        return 1;
+    }
+
+    else
+    {
+        return 0;
+    }
 }
 
 int main()
