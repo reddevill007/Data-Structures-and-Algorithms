@@ -166,128 +166,88 @@ void print(Node *&head)
     cout << " X " << endl;
 }
 
-void sortList(Node *head)
+Node *solve(Node *first, Node *second)
 {
-    int ct0 = 0;
-    int ct1 = 0;
-    int ct2 = 0;
-
-    Node *temp = head;
-
-    while (temp != NULL)
+    // if only one element is present in first list
+    if (first->next == NULL)
     {
-        if (temp->data == 0)
-            ct0++;
-        else if (temp->data == 1)
-            ct1++;
-        else if (temp->data == 2)
-            ct2++;
-        temp = temp->next;
+        first->next = second;
+        return first;
     }
+    Node *curr1 = first;
+    Node *next1 = curr1->next;
+    Node *curr2 = second;
+    Node *next2 = curr2->next;
 
-    temp = head;
-    while (temp != NULL)
+    while (next1 != NULL && curr2 != NULL)
     {
-        if (ct0 != 0)
+        if ((curr2->data >= curr1->data) && (curr2->data <= next1->data))
         {
-            temp->data = 0;
-            ct0--;
+            // add node between the first list
+            curr1->next = curr2;
+            next2 = curr2->next;
+            curr2->next = next1;
+            // update pointers
+            curr1 = curr2;
+            curr2 = next2;
         }
-        else if (ct1 != 0)
+
+        else
         {
-            temp->data = 1;
-            ct1--;
+            // incrementing curr1 and next1
+            curr1 = next1;
+            next1 = next1->next;
+            if (next1 == NULL)
+            {
+                curr1->next = curr2;
+                return first;
+            }
         }
-        else if (ct2 != 0)
-        {
-            temp->data = 2;
-            ct2--;
-        }
-        temp = temp->next;
     }
+    return first;
 }
 
-void populate(Node *&tail, Node *curr)
+Node *sortTwoLists(Node *first, Node *second)
 {
-    tail->next = curr;
-    tail = curr;
-}
-
-// Using 3 Lists
-void sortList2(Node *head)
-{
-    Node *zeroHead = new Node(-1);
-    Node *zeroTail = zeroHead;
-    Node *oneHead = new Node(-1);
-    Node *oneTail = oneHead;
-    Node *twoHead = new Node(-1);
-    Node *twoTail = twoHead;
-
-    Node *curr = head;
-
-    // Create seperate lists 0, 1, & 2
-    while (curr != NULL)
+    if (first == NULL)
     {
-        int val = curr->data;
-
-        if (val == 0)
-        {
-            populate(zeroTail, curr);
-        }
-        else if (val == 1)
-        {
-            populate(oneTail, curr);
-        }
-        else if (val == 2)
-        {
-            populate(twoTail, curr);
-        }
-        curr = curr->next;
+        return second;
     }
-    // Merge 3 Lists
-
-    // If 1s list not empty
-    if (oneHead->next != NULL)
+    if (second == NULL)
     {
-        zeroTail->next = oneHead->next;
+        return first;
+    }
+
+    if (first->data <= second->data)
+    {
+        return solve(first, second);
     }
     else
     {
-        // If 1s list is empty
-        zeroTail->next = twoHead->next;
+        return solve(second, first);
     }
-    oneTail->next = twoHead->next;
-    twoTail->next = NULL;
-
-    // New head
-    head = zeroHead->next;
-
-    delete zeroHead;
-    delete oneHead;
-    delete twoHead;
 }
 
 int main()
 {
     Node *node1 = new Node(1);
-    Node *head = node1;
-    Node *tail = node1;
+    Node *head1 = node1;
+    Node *tail1 = node1;
+    Node *node2 = new Node(2);
+    Node *head2 = node2;
+    Node *tail2 = node2;
+    insertAtEnd(tail1, 3);
+    insertAtEnd(tail1, 5);
+    insertAtEnd(tail1, 7);
+    insertAtEnd(tail2, 2);
+    insertAtEnd(tail2, 4);
+    insertAtEnd(tail2, 6);
 
-    insertAtHead(head, 1);
-    insertAtHead(head, 1);
-    insertAtHead(head, 2);
-    insertAtHead(head, 1);
-    insertAtHead(head, 2);
-    insertAtHead(head, 0);
-    insertAtHead(head, 0);
-    insertAtHead(head, 1);
-    insertAtHead(head, 2);
-    insertAtHead(head, 0);
+    cout << "Linked list before merging: " << endl;
+    print(head1);
+    print(head2);
 
-    cout << "Linked list before sorting: " << endl;
-    print(head);
-
-    sortList2(head);
-    cout << "\nLinked list after sorting: " << endl;
-    print(head);
+    head1 = sortTwoLists(head1, head2);
+    cout << "\nLinked list after merging: " << endl;
+    print(head1);
 }
