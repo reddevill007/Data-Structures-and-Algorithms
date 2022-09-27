@@ -7,6 +7,8 @@ using namespace std;
 int partition(int arr[], int s, int e)
 {
     int pivot = arr[s];
+
+    // counting element smaller or equal to pivot
     int ct = 0;
     for (int i = s + 1; i <= e; i++)
     {
@@ -45,6 +47,7 @@ int partition(int arr[], int s, int e)
 
 void quickSort(int arr[], int s, int e)
 {
+    // Base Case
     if (s >= e)
     {
         return;
