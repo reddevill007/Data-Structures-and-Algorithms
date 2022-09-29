@@ -1,98 +1,93 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-int st[100], n = 100, top = -1;
-
-void push(int val)
+class Stack
 {
-    if (top >= n)
-    {
-        cout << "Stack Overflow" << endl;
-    }
-    else
-    {
-        top++;
-        st[top] = val;
-    }
-}
+    // properties
+public:
+    int *arr;
+    int top;
+    int size;
 
-void pop()
-{
-    if (top <= -1)
+    // behaviour
+    Stack(int size)
     {
-        cout << "Stack Underflow" << endl;
+        this->size = size;
+        arr = new int[size];
+        top = -1;
     }
-    else
-    {
-        cout << "The popped element is " << st[top] << endl;
-        top--;
-    }
-}
 
-void peek()
-{
-    cout << "Top of stack is " << st[top] << endl;
-}
-
-void display()
-{
-    if (top >= 0)
+    void push(int element)
     {
-        cout << "Stack elements are:";
-        for (int i = top; i >= 0; i--)
-            cout << st[i] << " ";
-        cout << endl;
+        if (size - top > 1)
+        {
+            top++;
+            arr[top] = element;
+        }
+        else
+        {
+            cout << "Stack Overflow" << endl;
+        }
     }
-    else
-        cout << "Stack is empty";
-}
+
+    void pop()
+    {
+        if (top >= 0)
+        {
+            top--;
+        }
+        else
+        {
+            cout << "Stack Underflow" << endl;
+        }
+    }
+
+    int peek()
+    {
+        if (top >= 0)
+        {
+            return arr[top];
+        }
+        else
+        {
+            cout << "Stack is empty" << endl;
+            return -1;
+        }
+    }
+
+    bool isEmpty()
+    {
+        if (top == -1)
+        {
+            return true;
+        }
+        return false;
+    }
+};
 
 int main()
 {
-    int ch, val;
-    cout << "1) Push in stack" << endl;
-    cout << "2) Pop from stack" << endl;
-    cout << "3) Peek stack" << endl;
-    cout << "4) Display stack" << endl;
-    cout << "5) Exit" << endl;
-    do
-    {
-        cout << "Enter choice: " << endl;
-        cin >> ch;
-        switch (ch)
-        {
-        case 1:
-        {
-            cout << "Enter value to be pushed:" << endl;
-            cin >> val;
-            push(val);
-            break;
-        }
-        case 2:
-        {
-            pop();
-            break;
-        }
-        case 3:
-        {
-            peek();
-            break;
-        }
-        case 4:
-        {
-            display();
-            break;
-        }
-        case 5:
-        {
-            cout << "Exit" << endl;
-            break;
-        }
-        default:
-        {
-            cout << "Invalid Choice" << endl;
-        }
-        }
-    } while (ch != 5);
+    Stack *st = new Stack(5);
+    st->push(22);
+    st->push(11);
+    st->push(3);
+    st->push(22);
+    st->push(11);
+    st->push(3);
+
+    cout << st->peek() << endl;
+
+    st->pop();
+    cout << st->peek() << endl;
+
+    st->pop();
+    cout << st->peek() << endl;
+
+    st->pop();
+    cout << st->peek() << endl;
+
+    cout << "isEmpty " << st->isEmpty() << endl;
 }
