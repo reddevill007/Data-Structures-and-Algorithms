@@ -49,7 +49,6 @@ int celebrity(vector<vector<int>> &M, int n)
     int candidate = s.top();
 
     // row check
-    bool rowCheck = false;
     int zeroCt = 0;
 
     for (int i = 0; i < n; i++)
@@ -61,13 +60,12 @@ int celebrity(vector<vector<int>> &M, int n)
     }
 
     // all zeros
-    if (zeroCt == n)
+    if (zeroCt != n)
     {
-        rowCheck = true;
+        return -1;
     }
 
     // Col check
-    bool colCheck = false;
     int colCt = 0;
 
     for (int i = 0; i < n; i++)
@@ -79,19 +77,12 @@ int celebrity(vector<vector<int>> &M, int n)
     }
 
     // all 1 except diagnol
-    if (colCt == n - 1)
-    {
-        colCheck = true;
-    }
-
-    if (colCheck && rowCheck)
-    {
-        return candidate;
-    }
-    else
+    if (colCt != n - 1)
     {
         return -1;
     }
+
+    return candidate;
 }
 
 int main()
