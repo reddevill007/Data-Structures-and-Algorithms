@@ -56,3 +56,22 @@ int frogJump2(int n, vector<int> &heights)
 
     return prev;
 }
+
+int frogJumpWithKSteps(int n, vector<int> &heights, int k)
+{
+    if (n == 0)
+        return 0;
+
+    int minSteps = INT_MAX;
+
+    for (int j = 0; j <= k; j++)
+    {
+        if (ind - j > 0)
+        {
+            int jump = frogJumpWithKSteps(ind - j) + abs(heights[ind] - heights[ind - j]);
+            minSteps = min(minSteps, jump);
+        }
+    }
+
+    return minSteps;
+}
